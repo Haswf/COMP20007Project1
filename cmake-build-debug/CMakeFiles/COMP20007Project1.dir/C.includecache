@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.c
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+convex-hull.h
+/mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.h
+point.h
+/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+
+/mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.h
+point.h
+/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+
+/mnt/c/Users/Haswe/CLionProjects/untitled/point.c
+math.h
+-
+stdio.h
+-
+point.h
+/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+
+/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+

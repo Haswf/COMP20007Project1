@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/untitled.dir/point.c.o CMakeFiles/untitled.dir/convex-hull.c.o  -o untitled -lm 

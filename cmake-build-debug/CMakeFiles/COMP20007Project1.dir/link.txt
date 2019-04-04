@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/COMP20007Project1.dir/point.c.o CMakeFiles/COMP20007Project1.dir/convex-hull.c.o  -o COMP20007Project1 -lm 
