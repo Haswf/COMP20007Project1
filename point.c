@@ -21,13 +21,13 @@
 // Since it's not allocated using dynamic memory allocation it does not
 // need to be freed
 Point new_point(double x, double y) {
-  Point point = {x, y};
-  return point;
+    Point point = {x, y};
+    return point;
 }
 
 // Prints (on its own line) the Point in the format "x y"
 void print_point(Point p) {
-  printf("%.2f %.2f\n", p.x, p.y);
+    printf("%.2f %.2f\n", p.x, p.y);
 }
 
 double distance(Point p1, Point p2) {
@@ -36,6 +36,13 @@ double distance(Point p1, Point p2) {
 
 Point point_subtraction(Point p1, Point p2){
     // return p2 - p1
-    Point result = new_point(p2.x-p1.x, p2.y-p1.y);
-    return result;
+    p2.x -= p1.x;
+    p2.y -= p1.y;
+    return p2;
+}
+
+Point point_scalarmuptiplication(Point p, double scale){
+    p.x *= scale;
+    p.y *= scale;
+    return p;
 }

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.c" "/mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug/CMakeFiles/COMP20007Project1.dir/convex-hull.c.o"
-  "/mnt/c/Users/Haswe/CLionProjects/untitled/point.c" "/mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug/CMakeFiles/COMP20007Project1.dir/point.c.o"
+  "/mnt/c/COMP20007Project1/convex-hull.c" "/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles/COMP20007Project1.dir/convex-hull.c.o"
+  "/mnt/c/COMP20007Project1/point.c" "/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles/COMP20007Project1.dir/point.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

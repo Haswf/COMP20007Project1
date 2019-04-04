@@ -32,5 +32,6 @@ void print_point(Point p);
 // TODO: Add any other functions you may need
 double distance(Point p1, Point p2);
 Point point_subtraction(Point p1, Point p2);
+Point point_scalarmuptiplication(Point p, double scale);
 #endif
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Haswe/CLionProjects/untitled
+CMAKE_SOURCE_DIR = /mnt/c/COMP20007Project1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/COMP20007Project1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/COMP20007Project1.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/COMP20007Project1.dir/flags.make
 
 CMakeFiles/COMP20007Project1.dir/point.c.o: CMakeFiles/COMP20007Project1.dir/flags.make
 CMakeFiles/COMP20007Project1.dir/point.c.o: ../point.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/COMP20007Project1.dir/point.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project1.dir/point.c.o   -c /mnt/c/Users/Haswe/CLionProjects/untitled/point.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/COMP20007Project1.dir/point.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project1.dir/point.c.o   -c /mnt/c/COMP20007Project1/point.c
 
 CMakeFiles/COMP20007Project1.dir/point.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project1.dir/point.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Haswe/CLionProjects/untitled/point.c > CMakeFiles/COMP20007Project1.dir/point.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project1/point.c > CMakeFiles/COMP20007Project1.dir/point.c.i
 
 CMakeFiles/COMP20007Project1.dir/point.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project1.dir/point.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Haswe/CLionProjects/untitled/point.c -o CMakeFiles/COMP20007Project1.dir/point.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project1/point.c -o CMakeFiles/COMP20007Project1.dir/point.c.s
 
 CMakeFiles/COMP20007Project1.dir/point.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/COMP20007Project1.dir/point.c.o.provides.build: CMakeFiles/COMP20007P
 
 CMakeFiles/COMP20007Project1.dir/convex-hull.c.o: CMakeFiles/COMP20007Project1.dir/flags.make
 CMakeFiles/COMP20007Project1.dir/convex-hull.c.o: ../convex-hull.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/COMP20007Project1.dir/convex-hull.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project1.dir/convex-hull.c.o   -c /mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/COMP20007Project1.dir/convex-hull.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project1.dir/convex-hull.c.o   -c /mnt/c/COMP20007Project1/convex-hull.c
 
 CMakeFiles/COMP20007Project1.dir/convex-hull.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project1.dir/convex-hull.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.c > CMakeFiles/COMP20007Project1.dir/convex-hull.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project1/convex-hull.c > CMakeFiles/COMP20007Project1.dir/convex-hull.c.i
 
 CMakeFiles/COMP20007Project1.dir/convex-hull.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project1.dir/convex-hull.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.c -o CMakeFiles/COMP20007Project1.dir/convex-hull.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project1/convex-hull.c -o CMakeFiles/COMP20007Project1.dir/convex-hull.c.s
 
 CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.requires:
 
@@ -117,7 +117,7 @@ COMP20007Project1: CMakeFiles/COMP20007Project1.dir/point.c.o
 COMP20007Project1: CMakeFiles/COMP20007Project1.dir/convex-hull.c.o
 COMP20007Project1: CMakeFiles/COMP20007Project1.dir/build.make
 COMP20007Project1: CMakeFiles/COMP20007Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable COMP20007Project1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable COMP20007Project1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/COMP20007Project1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/COMP20007Project1.dir/clean:
 .PHONY : CMakeFiles/COMP20007Project1.dir/clean
 
 CMakeFiles/COMP20007Project1.dir/depend:
-	cd /mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Haswe/CLionProjects/untitled /mnt/c/Users/Haswe/CLionProjects/untitled /mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug /mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug /mnt/c/Users/Haswe/CLionProjects/untitled/cmake-build-debug/CMakeFiles/COMP20007Project1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/COMP20007Project1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/COMP20007Project1 /mnt/c/COMP20007Project1 /mnt/c/COMP20007Project1/cmake-build-debug /mnt/c/COMP20007Project1/cmake-build-debug /mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles/COMP20007Project1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/COMP20007Project1.dir/depend
 

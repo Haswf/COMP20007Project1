@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.c
+/mnt/c/COMP20007Project1/convex-hull.c
 math.h
 -
 stdio.h
@@ -14,21 +14,21 @@ stdio.h
 stdlib.h
 -
 convex-hull.h
-/mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.h
+/mnt/c/COMP20007Project1/convex-hull.h
 point.h
-/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+/mnt/c/COMP20007Project1/point.h
 
-/mnt/c/Users/Haswe/CLionProjects/untitled/convex-hull.h
+/mnt/c/COMP20007Project1/convex-hull.h
 point.h
-/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+/mnt/c/COMP20007Project1/point.h
 
-/mnt/c/Users/Haswe/CLionProjects/untitled/point.c
+/mnt/c/COMP20007Project1/point.c
 math.h
 -
 stdio.h
 -
 point.h
-/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+/mnt/c/COMP20007Project1/point.h
 
-/mnt/c/Users/Haswe/CLionProjects/untitled/point.h
+/mnt/c/COMP20007Project1/point.h
 
