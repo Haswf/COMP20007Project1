@@ -57,67 +57,41 @@ include CMakeFiles/COMP20007Project1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/COMP20007Project1.dir/flags.make
 
-CMakeFiles/COMP20007Project1.dir/point.c.o: CMakeFiles/COMP20007Project1.dir/flags.make
-CMakeFiles/COMP20007Project1.dir/point.c.o: ../point.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/COMP20007Project1.dir/point.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project1.dir/point.c.o   -c /mnt/c/COMP20007Project1/point.c
+CMakeFiles/COMP20007Project1.dir/dlist.c.o: CMakeFiles/COMP20007Project1.dir/flags.make
+CMakeFiles/COMP20007Project1.dir/dlist.c.o: ../dlist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/COMP20007Project1.dir/dlist.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project1.dir/dlist.c.o   -c /mnt/c/COMP20007Project1/dlist.c
 
-CMakeFiles/COMP20007Project1.dir/point.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project1.dir/point.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project1/point.c > CMakeFiles/COMP20007Project1.dir/point.c.i
+CMakeFiles/COMP20007Project1.dir/dlist.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project1.dir/dlist.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project1/dlist.c > CMakeFiles/COMP20007Project1.dir/dlist.c.i
 
-CMakeFiles/COMP20007Project1.dir/point.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project1.dir/point.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project1/point.c -o CMakeFiles/COMP20007Project1.dir/point.c.s
+CMakeFiles/COMP20007Project1.dir/dlist.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project1.dir/dlist.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project1/dlist.c -o CMakeFiles/COMP20007Project1.dir/dlist.c.s
 
-CMakeFiles/COMP20007Project1.dir/point.c.o.requires:
+CMakeFiles/COMP20007Project1.dir/dlist.c.o.requires:
 
-.PHONY : CMakeFiles/COMP20007Project1.dir/point.c.o.requires
+.PHONY : CMakeFiles/COMP20007Project1.dir/dlist.c.o.requires
 
-CMakeFiles/COMP20007Project1.dir/point.c.o.provides: CMakeFiles/COMP20007Project1.dir/point.c.o.requires
-	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/point.c.o.provides.build
-.PHONY : CMakeFiles/COMP20007Project1.dir/point.c.o.provides
+CMakeFiles/COMP20007Project1.dir/dlist.c.o.provides: CMakeFiles/COMP20007Project1.dir/dlist.c.o.requires
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/dlist.c.o.provides.build
+.PHONY : CMakeFiles/COMP20007Project1.dir/dlist.c.o.provides
 
-CMakeFiles/COMP20007Project1.dir/point.c.o.provides.build: CMakeFiles/COMP20007Project1.dir/point.c.o
-
-
-CMakeFiles/COMP20007Project1.dir/convex-hull.c.o: CMakeFiles/COMP20007Project1.dir/flags.make
-CMakeFiles/COMP20007Project1.dir/convex-hull.c.o: ../convex-hull.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/COMP20007Project1.dir/convex-hull.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project1.dir/convex-hull.c.o   -c /mnt/c/COMP20007Project1/convex-hull.c
-
-CMakeFiles/COMP20007Project1.dir/convex-hull.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project1.dir/convex-hull.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project1/convex-hull.c > CMakeFiles/COMP20007Project1.dir/convex-hull.c.i
-
-CMakeFiles/COMP20007Project1.dir/convex-hull.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project1.dir/convex-hull.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project1/convex-hull.c -o CMakeFiles/COMP20007Project1.dir/convex-hull.c.s
-
-CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.requires:
-
-.PHONY : CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.requires
-
-CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.provides: CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.requires
-	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.provides.build
-.PHONY : CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.provides
-
-CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.provides.build: CMakeFiles/COMP20007Project1.dir/convex-hull.c.o
+CMakeFiles/COMP20007Project1.dir/dlist.c.o.provides.build: CMakeFiles/COMP20007Project1.dir/dlist.c.o
 
 
 # Object files for target COMP20007Project1
 COMP20007Project1_OBJECTS = \
-"CMakeFiles/COMP20007Project1.dir/point.c.o" \
-"CMakeFiles/COMP20007Project1.dir/convex-hull.c.o"
+"CMakeFiles/COMP20007Project1.dir/dlist.c.o"
 
 # External object files for target COMP20007Project1
 COMP20007Project1_EXTERNAL_OBJECTS =
 
-COMP20007Project1: CMakeFiles/COMP20007Project1.dir/point.c.o
-COMP20007Project1: CMakeFiles/COMP20007Project1.dir/convex-hull.c.o
+COMP20007Project1: CMakeFiles/COMP20007Project1.dir/dlist.c.o
 COMP20007Project1: CMakeFiles/COMP20007Project1.dir/build.make
 COMP20007Project1: CMakeFiles/COMP20007Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable COMP20007Project1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/COMP20007Project1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable COMP20007Project1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/COMP20007Project1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,8 +99,7 @@ CMakeFiles/COMP20007Project1.dir/build: COMP20007Project1
 
 .PHONY : CMakeFiles/COMP20007Project1.dir/build
 
-CMakeFiles/COMP20007Project1.dir/requires: CMakeFiles/COMP20007Project1.dir/point.c.o.requires
-CMakeFiles/COMP20007Project1.dir/requires: CMakeFiles/COMP20007Project1.dir/convex-hull.c.o.requires
+CMakeFiles/COMP20007Project1.dir/requires: CMakeFiles/COMP20007Project1.dir/dlist.c.o.requires
 
 .PHONY : CMakeFiles/COMP20007Project1.dir/requires
 

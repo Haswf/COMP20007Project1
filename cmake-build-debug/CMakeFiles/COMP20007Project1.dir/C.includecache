@@ -6,29 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/COMP20007Project1/convex-hull.c
-math.h
--
-stdio.h
--
+/mnt/c/COMP20007Project1/dlist.c
+dlist.h
+/mnt/c/COMP20007Project1/dlist.h
 stdlib.h
 -
-convex-hull.h
-/mnt/c/COMP20007Project1/convex-hull.h
-point.h
-/mnt/c/COMP20007Project1/point.h
-
-/mnt/c/COMP20007Project1/convex-hull.h
-point.h
-/mnt/c/COMP20007Project1/point.h
-
-/mnt/c/COMP20007Project1/point.c
-math.h
+assert.h
 -
 stdio.h
 -
-point.h
-/mnt/c/COMP20007Project1/point.h
 
-/mnt/c/COMP20007Project1/point.h
+/mnt/c/COMP20007Project1/dlist.h
 

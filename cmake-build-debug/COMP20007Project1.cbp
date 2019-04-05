@@ -11,20 +11,20 @@
 				<Option working_dir="/mnt/c/COMP20007Project1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/mnt/c/COMP20007Project1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="COMP20007Project1">
@@ -41,10 +41,10 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 COMP20007Project1"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 COMP20007Project1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="COMP20007Project1/fast">
@@ -61,33 +61,27 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 COMP20007Project1/fast"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 COMP20007Project1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/mnt/c/COMP20007Project1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/COMP20007Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/COMP20007Project1/convex-hull.c">
+		<Unit filename="/mnt/c/COMP20007Project1/dlist.c">
 			<Option target="COMP20007Project1"/>
 		</Unit>
-		<Unit filename="/mnt/c/COMP20007Project1/convex-hull.h">
-			<Option target="COMP20007Project1"/>
-		</Unit>
-		<Unit filename="/mnt/c/COMP20007Project1/point.c">
-			<Option target="COMP20007Project1"/>
-		</Unit>
-		<Unit filename="/mnt/c/COMP20007Project1/point.h">
+		<Unit filename="/mnt/c/COMP20007Project1/dlist.h">
 			<Option target="COMP20007Project1"/>
 		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project1/CMakeLists.txt">
