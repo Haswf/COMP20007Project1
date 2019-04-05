@@ -78,10 +78,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/COMP20007Project1/convex-hull.c">
+			<Option target="COMP20007Project1"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project1/convex-hull.h">
+			<Option target="COMP20007Project1"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project1/deque.c">
+			<Option target="COMP20007Project1"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project1/deque.h">
+			<Option target="COMP20007Project1"/>
+		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project1/dlist.c">
 			<Option target="COMP20007Project1"/>
 		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project1/dlist.h">
+			<Option target="COMP20007Project1"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project1/main.c">
+			<Option target="COMP20007Project1"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project1/point.c">
+			<Option target="COMP20007Project1"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project1/point.h">
 			<Option target="COMP20007Project1"/>
 		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project1/CMakeLists.txt">

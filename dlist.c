@@ -4,10 +4,11 @@
  * created for Project 1 COMP20007 Design of Algorithms 2019
  * by Shuyang Fan (shuyangf@student.unimelb.edu.au)
  */
-#include "dlist.h"
 #include <stdlib.h>
 #include <assert.h>
 #include <stdio.h>
+#include "dlist.h"
+
 
 struct node {
     Node* next;
@@ -24,7 +25,7 @@ struct dlist {
 // helper function to create a new node and return its address
 Dlist* new_dlist(){
     Dlist *new = malloc(sizeof(Dlist));
-    assert(new_list);
+    assert(new);
     new->head = NULL;
     new->tail = NULL;
     new->size = 0;
@@ -48,26 +49,26 @@ void free_dlist(Dlist *ddl) {
 }
 
 // helper function to print from head to tail
-void forward_print(Dlist *ddl){
-    assert(ddl != NULL);
-    Node *curr = ddl->head;
-    while (curr) {
-        printf("%d->", curr->data);
-        curr = curr->next;
-    }
-    printf("\n");
-}
-
-// helper function to print from tail to head
-void backward_print(Dlist *ddl){
-    assert(ddl != NULL);
-    Node *curr = ddl->tail;
-    while (curr) {
-        printf("%d->", curr->data);
-        curr = curr->prev;
-    }
-    printf("\n");
-}
+//void forward_print(Dlist *ddl){
+//    assert(ddl != NULL);
+//    Node *curr = ddl->head;
+//    while (curr) {
+//        print_point(curr->data);
+//        curr = curr->next;
+//    }
+//    printf("\n");
+//}
+//
+//// helper function to print from tail to head
+//void backward_print(Dlist *ddl){
+//    assert(ddl != NULL);
+//    Node *curr = ddl->tail;
+//    while (curr) {
+//        print_point(curr->data);
+//        curr = curr->prev;
+//    }
+//    printf("\n");
+//}
 
 
 // helper function to clear memory of a node
@@ -201,4 +202,8 @@ Data dlist_remove_end(Dlist *ddl) {
 
     // done!
     return data;
+}
+
+int dlist_size(Dlist*ddl){
+    return ddl->size;
 }

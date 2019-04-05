@@ -9,7 +9,7 @@
 //
 // Do not change any of the constants or function prototypes in this file.
 //
-// An unomodified version of this file will be used when marking your
+// An unmodified version of this file will be used when marking your
 // assignment so changing this file may lead to compilation errors, and as a
 // result a marks penalty.
 

@@ -16,6 +16,7 @@
 #define DEQUE_H
 
 #include "point.h"
+#include "dlist.h"
 
 // You may change the definition of Deque but DO NOT change the name
 typedef struct deque Deque;

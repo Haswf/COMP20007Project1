@@ -78,23 +78,23 @@ int inside_hull(Point *polygon, int n, Point *hull) {
   fprintf(stderr, "Error: inside_hull() not implemented\n");
   exit(EXIT_FAILURE);
 }
-
-int main(){
-    // case 1a, expecting l
-    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(1.0, 3.0)));
-    // case 1b, expecting r
-    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(3.0, 1.0)));
-    // case 2a, expecting l
-    printf("%c\n", orientation(new_point(3.0, 0.0),new_point(1.0, 2.0),new_point(1.0, 1.0)));
-    // case 2b , expecting r
-    printf("%c\n", orientation(new_point(3.0, 0.0),new_point(0.0, 3.0),new_point(3.0, 1.0)));
-    // case 3a, expecting l
-    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(3.0, 0.0),new_point(1.5, 1.5)));
-    // case 3a, expecting r
-    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(3.0, 0.0),new_point(1.5, -1.5)));
-    // case 4a, expecting l
-    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(0.0, 3.0),new_point(-1.5, 1.5)));
-    // case 4b, expecting 4
-   printf("%c\n", orientation(new_point(0.0, 0.0),new_point(0.0, 3.0),new_point(1.5, 1.5)));
-    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(1.0, 1.0)));
-}
+//
+//int main(){
+//    // case 1a, expecting l
+//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(1.0, 3.0)));
+//    // case 1b, expecting r
+//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(3.0, 1.0)));
+//    // case 2a, expecting l
+//    printf("%c\n", orientation(new_point(3.0, 0.0),new_point(1.0, 2.0),new_point(1.0, 1.0)));
+//    // case 2b , expecting r
+//    printf("%c\n", orientation(new_point(3.0, 0.0),new_point(0.0, 3.0),new_point(3.0, 1.0)));
+//    // case 3a, expecting l
+//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(3.0, 0.0),new_point(1.5, 1.5)));
+//    // case 3a, expecting r
+//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(3.0, 0.0),new_point(1.5, -1.5)));
+//    // case 4a, expecting l
+//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(0.0, 3.0),new_point(-1.5, 1.5)));
+//    // case 4b, expecting 4
+//   printf("%c\n", orientation(new_point(0.0, 0.0),new_point(0.0, 3.0),new_point(1.5, 1.5)));
+//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(1.0, 1.0)));
+//}

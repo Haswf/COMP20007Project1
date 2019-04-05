@@ -123,6 +123,60 @@ COMP20007Project1/fast:
 	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/build
 .PHONY : COMP20007Project1/fast
 
+convex-hull.o: convex-hull.c.o
+
+.PHONY : convex-hull.o
+
+# target to build an object file
+convex-hull.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/convex-hull.c.o
+.PHONY : convex-hull.c.o
+
+convex-hull.i: convex-hull.c.i
+
+.PHONY : convex-hull.i
+
+# target to preprocess a source file
+convex-hull.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/convex-hull.c.i
+.PHONY : convex-hull.c.i
+
+convex-hull.s: convex-hull.c.s
+
+.PHONY : convex-hull.s
+
+# target to generate assembly for a file
+convex-hull.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/convex-hull.c.s
+.PHONY : convex-hull.c.s
+
+deque.o: deque.c.o
+
+.PHONY : deque.o
+
+# target to build an object file
+deque.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/deque.c.o
+.PHONY : deque.c.o
+
+deque.i: deque.c.i
+
+.PHONY : deque.i
+
+# target to preprocess a source file
+deque.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/deque.c.i
+.PHONY : deque.c.i
+
+deque.s: deque.c.s
+
+.PHONY : deque.s
+
+# target to generate assembly for a file
+deque.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/deque.c.s
+.PHONY : deque.c.s
+
 dlist.o: dlist.c.o
 
 .PHONY : dlist.o
@@ -150,6 +204,60 @@ dlist.c.s:
 	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/dlist.c.s
 .PHONY : dlist.c.s
 
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/main.c.s
+.PHONY : main.c.s
+
+point.o: point.c.o
+
+.PHONY : point.o
+
+# target to build an object file
+point.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/point.c.o
+.PHONY : point.c.o
+
+point.i: point.c.i
+
+.PHONY : point.i
+
+# target to preprocess a source file
+point.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/point.c.i
+.PHONY : point.c.i
+
+point.s: point.c.s
+
+.PHONY : point.s
+
+# target to generate assembly for a file
+point.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project1.dir/build.make CMakeFiles/COMP20007Project1.dir/point.c.s
+.PHONY : point.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... COMP20007Project1"
 	@echo "... edit_cache"
+	@echo "... convex-hull.o"
+	@echo "... convex-hull.i"
+	@echo "... convex-hull.s"
+	@echo "... deque.o"
+	@echo "... deque.i"
+	@echo "... deque.s"
 	@echo "... dlist.o"
 	@echo "... dlist.i"
 	@echo "... dlist.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... point.o"
+	@echo "... point.i"
+	@echo "... point.s"
 .PHONY : help
 
 

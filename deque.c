@@ -3,7 +3,7 @@
  *
  * created for COMP20007 Design of Algorithms 2019
  * template by Tobias Edwards <tobias.edwards@unimelb.edu.au>
- * implementation by <Insert Name Here>
+ * implementation by Shuyang Fan
  */
 
 //                   WRITE YOUR IMPLEMENTATION HERE
@@ -23,30 +23,30 @@
 #include <stdlib.h>
 
 #include "deque.h"
-#include "point.h"
+// Change data type here
 
 // TODO: Fill in this struct definition, or change the typedef in deque.h
 struct deque {
-  // TODO: Add fields here
+    Dlist *list;
 };
 
 // Create a new empty Deque and return a pointer to it
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 Deque *new_deque() {
-  // TODO: Implement new_deque()
-  fprintf(stderr, "Error: new_deque() not implemented\n");
-  exit(EXIT_FAILURE);
+    Deque *newdq = malloc(sizeof(Deque));
+    newdq->list = new_dlist();
+    return newdq;
 }
-
 
 // Free the memory associated with a Deque
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 void free_deque(Deque *deque) {
-  // TODO: Implement free_deque()
-  fprintf(stderr, "Error: free_deque() not implemented\n");
-  exit(EXIT_FAILURE);
+    // call free_dlist to free each node in the dlist
+    free_dlist(deque->list);
+    // free the structure itself
+    free(deque);
 }
 
 // Add a Point to the top of a Deque
@@ -56,9 +56,7 @@ void free_deque(Deque *deque) {
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 void deque_push(Deque *deque, Point data) {
-  // TODO: Implement deque_push()
-  fprintf(stderr, "Error: deque_push() not implemented\n");
-  exit(EXIT_FAILURE);
+    dlist_add_start(deque->list, data);
 }
 
 // Add a Point to the bottom of a Deque
@@ -68,9 +66,8 @@ void deque_push(Deque *deque, Point data) {
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 void deque_insert(Deque *deque, Point data) {
-  // TODO: Implement deque_insert()
-  fprintf(stderr, "Error: deque_insert() not implemented\n");
-  exit(EXIT_FAILURE);
+    // TODO: Implement deque_insert()
+    dlist_add_end(deque->list, data);
 }
 
 // Remove and return the top Point from a Deque
@@ -80,9 +77,8 @@ void deque_insert(Deque *deque, Point data) {
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 Point deque_pop(Deque *deque) {
-  // TODO: Implement deque_pop()
-  fprintf(stderr, "Error: deque_pop() not implemented\n");
-  exit(EXIT_FAILURE);
+    // TODO: Implement deque_pop()
+    return dlist_remove_start(deque->list);
 }
 
 // Remove and return the bottom Point from a Deque
@@ -92,9 +88,8 @@ Point deque_pop(Deque *deque) {
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 Point deque_remove(Deque *deque) {
-  // TODO: Implement deque_remove()
-  fprintf(stderr, "Error: deque_remove() not implemented\n");
-  exit(EXIT_FAILURE);
+    // TODO: Implement deque_remove()
+    return dlist_remove_end(deque->list);
 }
 
 // Return the number of Points in a Deque
@@ -104,9 +99,7 @@ Point deque_remove(Deque *deque) {
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 int deque_size(Deque *deque) {
-  // TODO: Implement deque_size()
-  fprintf(stderr, "Error: deque_size() not implemented\n");
-  exit(EXIT_FAILURE);
+    return dlist_size(deque->list);
 }
 
 // TODO: Add any other functions you might need for your Deque module
