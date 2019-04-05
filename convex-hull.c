@@ -26,39 +26,16 @@
 #define DEBUG 0
 
 char orientation(Point p0, Point p1, Point p2) {
-  // TODO: Implement orientation()
-    Point p0p1 = point_subtraction(p0, p1);
-    Point p0p2 = point_subtraction(p0, p2);
-
-    // Compute unit vector of p0p1
-    double length = distance(p0, p1);
-    Point unit_vector = point_scalarmuptiplication(p0p1, 1/length);
-
-    // Calculate parallel and vertical projection
-    double scalar_projection = (p0p2.x * p0p1.x + p0p2.y * p0p1.y) / length;
-    Point parallel = point_scalarmuptiplication(unit_vector, scalar_projection);
-    Point vertical = point_subtraction(parallel, p0p2);
-    if (DEBUG){
-        printf("Dot_product:%f\n", scalar_projection);
-        printf("Distance:%f\n", length);
-        printf("Unit Vector:");
-        print_point(unit_vector);
-        printf("p0p2:");
-        print_point(p0p2);
-        printf("Horizontal Projection Vector:");
-        print_point(parallel);
-        printf("Vertical Projection Vector:");
-        print_point(vertical);
-    }
-    if ((fabs(vertical.x) < 10e-7) && (fabs(vertical.y) < 10e-7)){
+    // Math: http://www.dcs.gla.ac.uk/~pat/52233/slides/Geometry1x1.pdf
+    double slope_diff = (p1.y - p0.y)*(p2.x - p1.x) - (p2.y - p1.y)*(p1.x - p0.x);
+    if (slope_diff == 0){
         return COLLINEAR;
     }
-    else if (vertical.x<0 || ((fabs(vertical.x) < 10e-7) && vertical.y > 0)){
-        return LEFT;
-    }
-    else if(vertical.x>0 || ((fabs(vertical.x) < 10e-7) && vertical.y < 0)){
+    else if (slope_diff > 0){
         return RIGHT;
     }
+    else if (slope_diff > 0){
+        return LEFT;
 }
 
 
