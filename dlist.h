@@ -26,6 +26,23 @@ Data dlist_remove_start(Dlist *ddl);
 Data dlist_remove_end(Dlist *ddl);
 int dlist_size(Dlist*ddl);
 
+// helper function to print from head to tail
+void forward_print(Dlist *ddl);
+// helper function to print from tail to head
+void backward_print(Dlist *ddl);
+
+
+struct node {
+    Node* next;
+    Node* prev;
+    Data data;
+};
+
+struct dlist {
+    Node *head;
+    Node *tail;
+    int size;
+};
 
 
 #endif //DLIST_H

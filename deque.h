@@ -21,6 +21,10 @@
 // You may change the definition of Deque but DO NOT change the name
 typedef struct deque Deque;
 
+struct deque {
+    Dlist *list;
+};
+
 // Create a new empty Deque and return a pointer to it
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
@@ -74,3 +78,6 @@ int deque_size(Deque *deque);
 // TODO: Add any other functions you might need for your Deque module
 
 #endif
+Point access_offset(Deque *deque, int offset);
+Point access_top(Deque *deque);
+Point access_bottom(Deque *deque);

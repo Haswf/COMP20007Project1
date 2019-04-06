@@ -9,19 +9,6 @@
 #include <stdio.h>
 #include "dlist.h"
 
-
-struct node {
-    Node* next;
-    Node* prev;
-    Data data;
-};
-
-struct dlist {
-    Node *head;
-    Node *tail;
-    int size;
-};
-
 // helper function to create a new node and return its address
 Dlist* new_dlist(){
     Dlist *new = malloc(sizeof(Dlist));
@@ -49,26 +36,26 @@ void free_dlist(Dlist *ddl) {
 }
 
 // helper function to print from head to tail
-//void forward_print(Dlist *ddl){
-//    assert(ddl != NULL);
-//    Node *curr = ddl->head;
-//    while (curr) {
-//        print_point(curr->data);
-//        curr = curr->next;
-//    }
-//    printf("\n");
-//}
-//
-//// helper function to print from tail to head
-//void backward_print(Dlist *ddl){
-//    assert(ddl != NULL);
-//    Node *curr = ddl->tail;
-//    while (curr) {
-//        print_point(curr->data);
-//        curr = curr->prev;
-//    }
-//    printf("\n");
-//}
+void forward_print(Dlist *ddl){
+    assert(ddl != NULL);
+    Node *curr = ddl->head;
+    while (curr) {
+        print_point(curr->data);
+        curr = curr->next;
+    }
+    printf("\n");
+}
+
+// helper function to print from tail to head
+void backward_print(Dlist *ddl){
+    assert(ddl != NULL);
+    Node *curr = ddl->tail;
+    while (curr) {
+        print_point(curr->data);
+        curr = curr->prev;
+    }
+    printf("\n");
+}
 
 
 // helper function to clear memory of a node

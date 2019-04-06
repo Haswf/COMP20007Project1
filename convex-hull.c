@@ -17,6 +17,7 @@
 #include <stdlib.h>
 
 #include "convex-hull.h"
+#include "deque.h"
 // Remove this after testing
 #include "point.h"
 // Returns the orientation of Point p2 in relation to the line segment p0p1.
@@ -27,15 +28,14 @@
 
 char orientation(Point p0, Point p1, Point p2) {
     // Math: http://www.dcs.gla.ac.uk/~pat/52233/slides/Geometry1x1.pdf
-    double slope_diff = (p1.y - p0.y)*(p2.x - p1.x) - (p2.y - p1.y)*(p1.x - p0.x);
-    if (slope_diff == 0){
+    double slope_diff = (p1.y - p0.y) * (p2.x - p1.x) - (p2.y - p1.y) * (p1.x - p0.x);
+    if (slope_diff == 0) {
         return COLLINEAR;
-    }
-    else if (slope_diff > 0){
+    } else if (slope_diff > 0) {
         return RIGHT;
-    }
-    else if (slope_diff > 0){
+    } else if (slope_diff > 0) {
         return LEFT;
+    }
 }
 
 
@@ -51,27 +51,46 @@ char orientation(Point p0, Point p1, Point p2) {
 //
 // If an error occurs this function should return INSIDE_HULL_ERROR.
 int inside_hull(Point *polygon, int n, Point *hull) {
-  // TODO: Implement the InsideHull algorithm
-  fprintf(stderr, "Error: inside_hull() not implemented\n");
-  exit(EXIT_FAILURE);
+    // TODO: CHECK INPUT IS VALID
+    Deque* hull_deque = new_deque();
+    Point P0 = polygon[0];
+    Point P1 = polygon[1];
+    Point P2 = polygon[2];
+
+    if (orientation(P0, P1, P2) == LEFT) {
+        deque_insert(hull_deque, P2);
+        deque_insert(hull_deque, P0);
+        deque_insert(hull_deque, P1);
+        deque_insert(hull_deque, P2);
+    } else {
+        deque_insert(hull_deque, P2);
+        deque_insert(hull_deque, P1);
+        deque_insert(hull_deque, P0);
+        deque_insert(hull_deque, P2);
+    }
+    int i = 3;
+    while (i<n){
+        Point curr_point = polygon[i];
+        int hull_deque_size = deque_size(hull_deque);
+        if ((orientation(access_offset(hull_deque,-2),
+                access_top(hull_deque), curr_point) == LEFT) &&
+                (orientation(access_bottom(hull_deque),
+                        access_offset(hull_deque, 1),
+                        curr_point) == LEFT)
+                ){
+            i++;
+        }
+        while (orientation(access_offset(hull_deque,-2),access_top(hull_deque), curr_point) == RIGHT){
+            deque_pop(hull_deque);
+        }
+        deque_push(hull_deque, curr_point);
+        while (orientation(access_bottom(hull_deque),
+                           access_offset(hull_deque, 1),
+                           curr_point) == RIGHT){
+            deque_remove(hull_deque);
+        }
+        deque_insert(hull_deque, curr_point);
+        i++;
+    }
+    forward_print(hull_deque->list);
 }
-//
-//int main(){
-//    // case 1a, expecting l
-//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(1.0, 3.0)));
-//    // case 1b, expecting r
-//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(3.0, 1.0)));
-//    // case 2a, expecting l
-//    printf("%c\n", orientation(new_point(3.0, 0.0),new_point(1.0, 2.0),new_point(1.0, 1.0)));
-//    // case 2b , expecting r
-//    printf("%c\n", orientation(new_point(3.0, 0.0),new_point(0.0, 3.0),new_point(3.0, 1.0)));
-//    // case 3a, expecting l
-//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(3.0, 0.0),new_point(1.5, 1.5)));
-//    // case 3a, expecting r
-//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(3.0, 0.0),new_point(1.5, -1.5)));
-//    // case 4a, expecting l
-//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(0.0, 3.0),new_point(-1.5, 1.5)));
-//    // case 4b, expecting 4
-//   printf("%c\n", orientation(new_point(0.0, 0.0),new_point(0.0, 3.0),new_point(1.5, 1.5)));
-//    printf("%c\n", orientation(new_point(0.0, 0.0),new_point(2.0, 2.0),new_point(1.0, 1.0)));
-//}
