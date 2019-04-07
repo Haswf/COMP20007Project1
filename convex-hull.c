@@ -33,7 +33,7 @@ char orientation(Point p0, Point p1, Point p2) {
         return COLLINEAR;
     } else if (slope_diff > 0) {
         return RIGHT;
-    } else if (slope_diff > 0) {
+    } else if (slope_diff < 0) {
         return LEFT;
     }
 }
@@ -58,27 +58,25 @@ int inside_hull(Point *polygon, int n, Point *hull) {
     Point P2 = polygon[2];
 
     if (orientation(P0, P1, P2) == LEFT) {
-        deque_insert(hull_deque, P2);
-        deque_insert(hull_deque, P0);
-        deque_insert(hull_deque, P1);
-        deque_insert(hull_deque, P2);
+        deque_push(hull_deque, P2);
+        deque_push(hull_deque, P0);
+        deque_push(hull_deque, P1);
+        deque_push(hull_deque, P2);
     } else {
-        deque_insert(hull_deque, P2);
-        deque_insert(hull_deque, P1);
-        deque_insert(hull_deque, P0);
-        deque_insert(hull_deque, P2);
+        deque_push(hull_deque, P2);
+        deque_push(hull_deque, P1);
+        deque_push(hull_deque, P0);
+        deque_push(hull_deque, P2);
     }
+
     int i = 3;
     while (i<n){
         Point curr_point = polygon[i];
-        int hull_deque_size = deque_size(hull_deque);
-        if ((orientation(access_offset(hull_deque,-2),
-                access_top(hull_deque), curr_point) == LEFT) &&
-                (orientation(access_bottom(hull_deque),
-                        access_offset(hull_deque, 1),
-                        curr_point) == LEFT)
+        if ((orientation(access_offset(hull_deque,-2), access_top(hull_deque), curr_point) == LEFT) &&
+                (orientation(access_bottom(hull_deque), access_offset(hull_deque, 1), curr_point) == LEFT)
                 ){
             i++;
+            continue;
         }
         while (orientation(access_offset(hull_deque,-2),access_top(hull_deque), curr_point) == RIGHT){
             deque_pop(hull_deque);
@@ -92,5 +90,14 @@ int inside_hull(Point *polygon, int n, Point *hull) {
         deque_insert(hull_deque, curr_point);
         i++;
     }
-    forward_print(hull_deque->list);
+
+    // write hull_deque to hull
+    Node* curr = hull_deque->list->head;
+    int j = 0;
+    while (curr->next){
+        hull[j] = curr->data;
+        curr = curr->next;
+        j++;
+    }
+    return deque_size(hull_deque) - 1;
 }

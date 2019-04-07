@@ -43,7 +43,7 @@ void forward_print(Dlist *ddl){
         print_point(curr->data);
         curr = curr->next;
     }
-    printf("\n");
+    //printf("\n");
 }
 
 // helper function to print from tail to head

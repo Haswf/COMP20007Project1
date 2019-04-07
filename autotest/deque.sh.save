@@ -1,0 +1,3 @@
+$ for f in deque-*-.txt in.txtdo
+	echo "Processing $f file.."
+done
