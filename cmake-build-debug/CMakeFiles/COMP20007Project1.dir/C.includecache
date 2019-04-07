@@ -15,14 +15,12 @@ stdlib.h
 -
 convex-hull.h
 /mnt/c/COMP20007Project1/convex-hull.h
-deque.h
-/mnt/c/COMP20007Project1/deque.h
-point.h
-/mnt/c/COMP20007Project1/point.h
 
 /mnt/c/COMP20007Project1/convex-hull.h
 point.h
 /mnt/c/COMP20007Project1/point.h
+deque.h
+/mnt/c/COMP20007Project1/deque.h
 
 /mnt/c/COMP20007Project1/deque.c
 stdio.h

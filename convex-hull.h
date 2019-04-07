@@ -3,7 +3,7 @@
  *
  * created for COMP20007 Design of Algorithms 2019
  * template by Tobias Edwards <tobias.edwards@unimelb.edu.au>
- * implementation by <Insert Name Here>
+ * implementation by <Shuyang Fan>
  */
 
 // You must not change any of the code already provided in this file, such as
@@ -16,6 +16,7 @@
 #define CONVEX_HULL_H
 
 #include "point.h"
+#include "deque.h"
 
 // Possible results from the inside_hull() algorithm
 #define INSIDE_HULL_ERROR -1
@@ -25,6 +26,9 @@
 #define LEFT 'l'
 #define RIGHT 'r'
 #define COLLINEAR 'c'
+
+// This is minimum points required to make a convex hull
+#define MIN 3
 
 // Returns the orientation of Point p2 in relation to the line segment p0p1.
 // If p2 is to the left of p0p1 then it returns LEFT ('l'), if p2 is to the

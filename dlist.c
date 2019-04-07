@@ -2,14 +2,15 @@
  * Module for creating and manipulating doubly-linked lists of Data
  *
  * created for Project 1 COMP20007 Design of Algorithms 2019
- * by Shuyang Fan (shuyangf@student.unimelb.edu.au)
- */
+ * by Shuyang Fan <shuyangf@student.unimelb.edu.au>
+ * derived from linked list module written by Matt Farrugia <matt.farrugia@unimelb.edu.au> */
+
 #include <stdlib.h>
 #include <assert.h>
 #include <stdio.h>
 #include "dlist.h"
 
-// helper function to create a new node and return its address
+// helper function to create a new dlist and return its address
 Dlist* new_dlist(){
     Dlist *new = malloc(sizeof(Dlist));
     assert(new);
@@ -19,7 +20,7 @@ Dlist* new_dlist(){
     return new;
 }
 
-// helper function to free a dlist node by node
+// free a dlist node by node
 void free_dlist(Dlist *ddl) {
     assert(ddl != NULL);
     Node *curr = ddl->head;
@@ -43,7 +44,7 @@ void forward_print(Dlist *ddl){
         print_point(curr->data);
         curr = curr->next;
     }
-    //printf("\n");
+    printf("\n");
 }
 
 // helper function to print from tail to head
@@ -64,7 +65,7 @@ void free_node(Node *node) {
 }
 
 // add an element to the front of a list
-// This operation is O(n)
+// This operation is O(1)
 void dlist_add_start(Dlist *ddl, Data data){
     assert(ddl != NULL);
 
@@ -92,7 +93,7 @@ void dlist_add_start(Dlist *ddl, Data data){
 }
 
 // add an element to the back of a list
-// This operation is O(n)
+// This operation is O(1)
 void dlist_add_end(Dlist *ddl, Data data) {
     assert(ddl != NULL);
 
@@ -158,7 +159,7 @@ Node *new_node() {
     return node;
 }
 
-// Remove the last element in an doubly linked list.
+// Remove the last element in a doubly linked list.
 // This operation is (1)
 // Make sure list has at least 1 element.
 
@@ -191,6 +192,7 @@ Data dlist_remove_end(Dlist *ddl) {
     return data;
 }
 
+// Return the size of given dlist
 int dlist_size(Dlist*ddl){
     return ddl->size;
 }

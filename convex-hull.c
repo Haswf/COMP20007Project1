@@ -3,7 +3,7 @@
  *
  * created for COMP20007 Design of Algorithms 2019
  * template by Tobias Edwards <tobias.edwards@unimelb.edu.au>
- * implementation by <Insert Name Here>
+ * implementation by <Shuyang Fan>
  */
 
 //                   WRITE YOUR IMPLEMENTATION HERE
@@ -15,17 +15,12 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "convex-hull.h"
-#include "deque.h"
-// Remove this after testing
-#include "point.h"
+
 // Returns the orientation of Point p2 in relation to the line segment p0p1.
 // If p2 is to the left of p0p1 then it returns LEFT ('l'), if p2 is to the
 // right it returns RIGHT ('r').
 // If p0, p1 and p2 are collinear then COLLINEAR ('c') is returned.
-#define DEBUG 0
-
 char orientation(Point p0, Point p1, Point p2) {
     // Math: http://www.dcs.gla.ac.uk/~pat/52233/slides/Geometry1x1.pdf
     double slope_diff = (p1.y - p0.y) * (p2.x - p1.x) - (p2.y - p1.y) * (p1.x - p0.x);
@@ -37,7 +32,6 @@ char orientation(Point p0, Point p1, Point p2) {
         return LEFT;
     }
 }
-
 
 // Takes a polygon (i.e. an array of points) given in counter-clockwise order
 // with n points.
@@ -51,7 +45,12 @@ char orientation(Point p0, Point p1, Point p2) {
 //
 // If an error occurs this function should return INSIDE_HULL_ERROR.
 int inside_hull(Point *polygon, int n, Point *hull) {
-    // TODO: CHECK INPUT IS VALID
+    // Check if three successive points in the polygon are collinear
+    for (int count=0; count<n-2;count++){
+        if (orientation(polygon[count],polygon[count+1], polygon[count+2]) == COLLINEAR){
+            return COLLINEAR_POINTS;
+        }
+    }
     Deque* hull_deque = new_deque();
     Point P0 = polygon[0];
     Point P1 = polygon[1];
@@ -91,13 +90,27 @@ int inside_hull(Point *polygon, int n, Point *hull) {
         i++;
     }
 
-    // write hull_deque to hull
-    Node* curr = hull_deque->list->head;
-    int j = 0;
-    while (curr->next){
-        hull[j] = curr->data;
-        curr = curr->next;
-        j++;
+    // get the size of deque
+    int size = deque_size(hull_deque);
+
+    if (size < MIN){
+        free_deque(hull_deque);
+        return INSIDE_HULL_ERROR;
     }
-    return deque_size(hull_deque) - 1;
+
+    // Store hull_deque to hull
+    int j = 0;
+    Node* curr = hull_deque->list->head;
+    while (curr->next){
+        hull[j++] = curr->data;
+        curr = curr->next;
+        // Move to next position
+    }
+
+    // free deque before returning
+    free_deque(hull_deque);
+    hull_deque = NULL;
+
+    // return deque size-1
+    return size - 1;
 }

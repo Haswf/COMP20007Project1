@@ -23,10 +23,6 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "deque.h"
-// Change data type here
-
-// TODO: Fill in this struct definition, or change the typedef in deque.h
-
 
 // Create a new empty Deque and return a pointer to it
 //
@@ -50,7 +46,7 @@ void free_deque(Deque *deque) {
 // Add a Point to the top of a Deque
 //
 // TODO: Fill in the runtime of this function
-// Runtime: ...
+// Runtime: O(1)
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 void deque_push(Deque *deque, Point data) {
@@ -60,7 +56,7 @@ void deque_push(Deque *deque, Point data) {
 // Add a Point to the bottom of a Deque
 //
 // TODO: Fill in the runtime of this function
-// Runtime: ...
+// Runtime: O(1)
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 void deque_insert(Deque *deque, Point data) {
@@ -71,7 +67,7 @@ void deque_insert(Deque *deque, Point data) {
 // Remove and return the top Point from a Deque
 //
 // TODO: Fill in the runtime of this function
-// Runtime: ...
+// Runtime: O(1)
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 Point deque_pop(Deque *deque) {
@@ -82,7 +78,7 @@ Point deque_pop(Deque *deque) {
 // Remove and return the bottom Point from a Deque
 //
 // TODO: Fill in the runtime of this function
-// Runtime: ...
+// Runtime: O(1)
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 Point deque_remove(Deque *deque) {
@@ -93,28 +89,33 @@ Point deque_remove(Deque *deque) {
 // Return the number of Points in a Deque
 //
 // TODO: Fill in the runtime of this function
-// Runtime: ...
+// Runtime: O(1)
 //
 // DO NOT CHANGE THIS FUNCTION SIGNATURE
 int deque_size(Deque *deque) {
     return dlist_size(deque->list);
 }
 
-// TODO: Add any other functions you might need for your Deque module
-
+// Return the top Point from a Deque
 Point access_top(Deque *deque){
     assert(deque);
-    // Deque has at least 1 element
+    // Assert Deque is not empty
     assert(deque_size(deque) > 0);
     return deque->list->tail->data;
 }
 
+// Return the bottom Point from a Deque
 Point access_bottom(Deque *deque){
     assert(deque);
-    // Deque has at least 1 element
+    // Assert Deque is not empty
     assert(deque_size(deque) > 0);
     return deque->list->head->data;
 }
+
+
+// Provide "pythonic" access to deque by index.
+// The bottom has index 0. The next one is 1 And so on
+// The top has index -1. The next one is -2 and so on.
 Point access_offset(Deque *deque, int offset){
     int length = deque_size(deque);
     // check if offset is valid
@@ -124,27 +125,32 @@ Point access_offset(Deque *deque, int offset){
         int i;
         // Retrieve head
         Node* curr = deque->list->head;
+        // Traverse forward to target node
         for (i=offset;i>0;i--){
             curr = curr->next;
         }
+        // return data
         return curr->data;
     }
     // Access top
     if (offset < 0){
         int i;
-        // Retrieve head
+        // Retrieve tail
         Node* curr = deque->list->tail;
+        // Traverse backward to target node
         for (i=offset;i<-1;i++){
             curr = curr->prev;
         }
+        // return data
         return curr->data;
     }
 }
 
+// Function to test access_offset functionality
 void test_access_offset(){
     // initialise test deque
     Deque* mydeque = new_deque();
-    // add points
+    // add points to deque
     deque_push(mydeque, new_point(1.0, 2.0));
     deque_push(mydeque, new_point(3.0, 1.0));
     deque_push(mydeque, new_point(1.5, 1.5));
@@ -158,6 +164,3 @@ void test_access_offset(){
     print_point(access_offset(mydeque,-3));
     print_point(access_offset(mydeque,-4));
 }
-//int main(){
-//    test_access_offset();
-//}
