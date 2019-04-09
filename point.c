@@ -29,20 +29,3 @@ Point new_point(double x, double y) {
 void print_point(Point p) {
     printf("%.2f %.2f\n", p.x, p.y);
 }
-
-double distance(Point p1, Point p2) {
-    return sqrt(pow((p1.x - p2.x), 2) + pow((p1.y - p2.y), 2));
-}
-
-Point point_subtraction(Point p1, Point p2){
-    // return p2 - p1
-    p2.x -= p1.x;
-    p2.y -= p1.y;
-    return p2;
-}
-
-Point point_scalarmuptiplication(Point p, double scale){
-    p.x *= scale;
-    p.y *= scale;
-    return p;
-}

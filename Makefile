@@ -5,9 +5,9 @@
 # Created by Tobias Edwards <tobias.edwards@unimelb.edu.au>
 
 CC     = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -std=c99
 EXE    = a1
-OBJ    = main.o point.o deque.o convex-hull.o
+OBJ    = main.o point.o deque.o convex-hull.o dlist.o
 
 # Default Target, so "$ make" or "$ make all" will do this
 all: $(EXE)
@@ -19,10 +19,12 @@ $(EXE): $(OBJ)
 # Other Dependencies
 point.o: point.h point.c
 	$(CC) $(CFLAGS) -c point.c
-deque.o: deque.h deque.c
+deque.o: deque.h deque.c dlist.h dlist.c
 	$(CC) $(CFLAGS) -c deque.c
 convex-hull.o: convex-hull.h convex-hull.c
 	$(CC) $(CFLAGS) -c convex-hull.c
+dlist.o: point.h point.c dlist.c dlist.h
+	$(CC) $(CFLAGS) -c dlist.c
 
 # TODO: Add any other dependencies you may create
 

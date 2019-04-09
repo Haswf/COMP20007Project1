@@ -28,7 +28,7 @@ char orientation(Point p0, Point p1, Point p2) {
         return COLLINEAR;
     } else if (slope_diff > 0) {
         return RIGHT;
-    } else if (slope_diff < 0) {
+    } else{
         return LEFT;
     }
 }

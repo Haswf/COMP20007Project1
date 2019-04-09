@@ -133,7 +133,7 @@ Point access_offset(Deque *deque, int offset){
         return curr->data;
     }
     // Access top
-    if (offset < 0){
+    else {
         int i;
         // Retrieve tail
         Node* curr = deque->list->tail;
