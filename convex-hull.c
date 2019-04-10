@@ -22,6 +22,7 @@
 // right it returns RIGHT ('r').
 // If p0, p1 and p2 are collinear then COLLINEAR ('c') is returned.
 char orientation(Point p0, Point p1, Point p2) {
+    // Calculate slope difference between two line segments.
     // Math: http://www.dcs.gla.ac.uk/~pat/52233/slides/Geometry1x1.pdf
     double slope_diff = (p1.y - p0.y) * (p2.x - p1.x) - (p2.y - p1.y) * (p1.x - p0.x);
     if (slope_diff == 0) {
@@ -56,6 +57,7 @@ int inside_hull(Point *polygon, int n, Point *hull) {
     Point P1 = polygon[1];
     Point P2 = polygon[2];
 
+    // Push four points as suggested
     if (orientation(P0, P1, P2) == LEFT) {
         deque_push(hull_deque, P2);
         deque_push(hull_deque, P0);
@@ -70,10 +72,12 @@ int inside_hull(Point *polygon, int n, Point *hull) {
 
     int i = 3;
     while (i<n){
+        // Select new point
         Point curr_point = polygon[i];
         if ((orientation(access_offset(hull_deque,-2), access_top(hull_deque), curr_point) == LEFT) &&
                 (orientation(access_bottom(hull_deque), access_offset(hull_deque, 1), curr_point) == LEFT)
                 ){
+            // Skip, check next point
             i++;
             continue;
         }
@@ -93,6 +97,7 @@ int inside_hull(Point *polygon, int n, Point *hull) {
     // get the size of deque
     int size = deque_size(hull_deque);
 
+    // Check if points in deque are less than 3.
     if (size < MIN){
         free_deque(hull_deque);
         return INSIDE_HULL_ERROR;

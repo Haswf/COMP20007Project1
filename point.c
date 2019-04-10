@@ -11,9 +11,8 @@
 //
 // You may, however, add additional functions and/or types which you may need
 // while implementing your algorithms and data structures.
-#include <math.h>
-#include <stdio.h>
 
+#include <stdio.h>
 #include "point.h"
 
 
