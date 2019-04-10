@@ -46,8 +46,8 @@ char orientation(Point p0, Point p1, Point p2) {
 // If an error occurs this function should return INSIDE_HULL_ERROR.
 int inside_hull(Point *polygon, int n, Point *hull) {
     // Check if three successive points in the polygon are collinear
-    for (int count=0; count<n-2;count++){
-        if (orientation(polygon[count],polygon[count+1], polygon[count+2]) == COLLINEAR){
+    for (int count=0; count<n-1;count++){
+        if ((orientation(polygon[count],polygon[(count+1) % n], polygon[(count+2) % n])) == COLLINEAR){
             return COLLINEAR_POINTS;
         }
     }
